@@ -11,7 +11,7 @@ Use this checklist before rewriting. Tag only the categories that are clearly pr
 
 ## Template-like transitions
 
-- What it looks like: repeated connectors such as "Furthermore," "Moreover," "In addition," used mechanically
+- What it looks like: repeated connectors such as "Furthermore," "Moreover," or "In addition," used mechanically
 - Why it reads as LLM-like: the flow becomes uniformly polished and predictable
 - Safe fix: vary structure, merge sentences, or remove the transition
 - Do not: make the prose chatty or casual
@@ -71,3 +71,17 @@ Use this checklist before rewriting. Tag only the categories that are clearly pr
 - Why it reads as LLM-like: it sounds like a submission template rather than an author's note
 - Safe fix: keep the letter concise, direct, and professional
 - Do not: become casual or overly personal
+
+## Residual low-risk prose
+
+- What it looks like: unchanged background sentences that still contain generic praise, empty evaluation, or obvious template wording
+- Why it reads as LLM-like: the main rewrite pass may look clean while low-risk residue remains untouched
+- Safe fix: flag it for `Unchanged Suspicious Items` or apply a low-risk cleanup
+- Do not: overreact by forcing a full rewrite of already acceptable prose
+
+## Surface residue
+
+- What it looks like: broken sentence boundaries, missing spaces, `Fig.7`-style label spacing, or full-width numbering in an English manuscript
+- Why it reads as LLM-like: it often survives prose cleanup and makes the output look unfinished
+- Safe fix: apply deterministic surface cleanup or surface it in `Unchanged Suspicious Items`
+- Do not: treat these issues as claim-level or evidence-level rewriting problems

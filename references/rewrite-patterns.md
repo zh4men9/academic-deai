@@ -68,6 +68,39 @@ This suggests that the method may be useful in related domains.
 **Why**  
 The revision removes stacked hedges while keeping the claim appropriately cautious.
 
+## Detail-preserving compression
+
+**Before**  
+We selected six representative methods for evaluation, including Method A, Method B, Method C, Method D, Method E, and Method F, because each represents a different family of approaches.
+
+**Better**  
+We selected six representative methods for evaluation: Method A, Method B, Method C, Method D, Method E, and Method F, each representing a different family of approaches.
+
+**Why**  
+The revision compresses around the concrete list instead of compressing the list away.
+
+## Citation-sensitive compression
+
+**Before**  
+Smith et al. propose a density-based method, while Lee et al. introduce a contrastive alternative. By contrast, Chen et al. focus on reward shaping rather than state novelty.
+
+**Better**  
+Smith et al. propose a density-based method, Lee et al. a contrastive alternative, and Chen et al. a reward-shaping approach rather than a state-novelty method.
+
+**Why**  
+The revision reduces scaffolding while preserving the attribution skeleton and comparison logic.
+
+## Symbol-safe micro-edit
+
+**Before**  
+It is important to note that the optimal x values may vary depending on the specific characteristics of the environment and the algorithm being used.
+
+**Better**  
+The optimal x values may vary with the environment and algorithm.
+
+**Why**  
+The revision removes reminder-style framing while leaving the variable-bearing structure intact.
+
 ## Cover-letter naturalization
 
 **Before**  

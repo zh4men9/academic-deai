@@ -1,4 +1,4 @@
 interface:
   display_name: "Academic De-AI"
-  short_description: "Conservative de-AI editing for academic prose"
-  default_prompt: "Use $academic-deai to conservatively de-AI this academic text while preserving meaning, evidence, and scholarly tone, and add Manual Check Items for risky edits."
+  short_description: "Balanced de-AI editing for academic prose"
+  default_prompt: "Use $academic-deai to apply balanced de-AI editing to academic text while preserving meaning, detail, evidence, and scholarly tone. Keep risky edits restrained, disclose skipped high-risk items, and list unchanged suspicious residue transparently."

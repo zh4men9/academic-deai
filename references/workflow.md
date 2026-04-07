@@ -2,14 +2,28 @@
 
 ## 1. Triage
 
-Identify all four before editing:
+Identify all five before editing:
 
 - genre: manuscript, cover letter, rebuttal, or review response
 - section: abstract, introduction, related work, methods, results, discussion, conclusion, or other
 - risk level: low, medium, or high
-- sensitivity: ordinary or citation-sensitive
+- sensitivity: ordinary, citation-sensitive, or symbol-bearing
+- claim mode: `closer to source`, `balanced`, or `conservative`
 
-## 2. Risk Classification
+Default claim mode is `balanced`.
+
+## 2. Diagnostic Pass
+
+Use the diagnostic checklist before rewriting.
+
+Look for:
+
+- AI-like prose signals
+- citation-sensitive comparison structure
+- concrete detail that must not be lost
+- deterministic surface residue such as broken sentence boundaries, missing spaces, figure-label spacing, or full-width numbering
+
+## 3. Risk Classification
 
 Use these defaults.
 
@@ -19,6 +33,7 @@ Use these defaults.
 - introduction framing
 - conclusion inflation
 - cover-letter stiffness
+- general background prose without citation-sensitive comparisons
 
 ### Medium-risk text
 
@@ -35,8 +50,28 @@ Use these defaults.
 - exact numerical result interpretation
 - theorem-like language
 - statistical wording
+- symbol-bearing technical paragraphs
 
-## 3. Edit Decision
+## 4. Detail Preservation Guard
+
+Before accepting any non-trivial rewrite, check whether the revision drops or weakens:
+
+- named algorithms
+- datasets or environments
+- enumerations
+- scoped qualifiers
+- comparison bases
+- evidence-linked conditions
+
+If concrete detail is lost, do one of the following:
+
+- revert to `Micro-edit only`
+- keep the original text
+- surface the issue explicitly in `Risk Check`
+
+Do not compress away concrete lists when the safer option is to compress around them.
+
+## 5. Edit Decision
 
 Choose one edit level explicitly.
 
@@ -49,59 +84,68 @@ Choose one edit level explicitly.
 
 - Use for high-risk text by default.
 - Use for citation-sensitive text by default.
-- Limit changes to removing empty transitions, repeated novelty framing, inflated adverbs, unnecessary repetition, or overbroad scope language.
-- Do not materially restructure the sentence unless the gain clearly outweighs the risk.
+- Use for symbol-bearing text by default.
+- Limit changes to empty transitions, repeated novelty framing, inflated adverbs, reminder phrases, unnecessary repetition, overbroad scope language, and deterministic surface cleanup.
+- Do not materially restructure the sentence.
+- Do not alter inline math, variable-bearing spans, embedded objects, or definition skeletons.
 
 ### Full safe rewrite
 
 - Use only for low-risk text.
 - Medium-risk text may use it only when attribution, evidence linkage, and claim calibration remain clearly intact.
 
-## 4. Manual Check Items
+## 6. Manual Check Items
 
-Generate a separate `Manual Check Items` block when any of these triggers is hit:
+Generate a separate `Manual Check Items` block only when a changed sentence is materially risky.
 
-- claim strength changed or softened in a way that affects interpretation
-- wording around exact quantitative results changed
+Typical triggers:
+
+- claim strength changed in a way that affects interpretation
+- wording around an exact quantitative result changed
 - attribution-bearing or citation-bearing sentence rewritten
 - methods, procedure, or assumptions sentence rewritten
 - causal explanation rewritten
 - generality scope narrowed or broadened
 - definition-like sentence rewritten into a more descriptive sentence
-- any edit where preserving precision required trading off fluency
+- an edit required a tradeoff between precision and fluency
 
-Use this fixed field structure for each checklist item:
+Do not use `Manual Check Items` for skipped high-risk candidates or unchanged suspicious residue.
 
-- location or sentence reference
-- original fragment
-- revised fragment
-- risk type
-- why it needs review
-- suggested reviewer question
+## 7. Transparent Reporting
 
-## 5. Output Assembly
+After rewriting, separate three reporting surfaces:
 
-Use these output blocks consistently:
+- `Manual Check Items`: changed text that still needs review
+- `Skipped High-Risk Items`: text left unchanged because safe rewriting would require violating the skill's risk limits
+- `Unchanged Suspicious Items`: low-risk or surface-level residue that still looks suspicious after the pass
 
-- `Diagnosis`
-- `Priority Fixes` when in diagnostic mode
-- `Revised Text` when rewriting
-- `Risk Check`
-- `Manual Check Items` when a trigger fires
-- `Verdict` in final audit mode
+Do not collapse all residual uncertainty into `Manual Check Items`.
 
-## 6. Post-Edit Audit
+## 8. Residual Scan
+
+After any rewrite pass, scan unchanged text for:
+
+- residual low-risk AI-like prose
+- broken sentence boundaries
+- missing sentence or label spacing
+- figure/table label formatting residue
+- full-width numbering or other obvious surface-style mismatches
+
+Surface these findings in `Unchanged Suspicious Items`.
+
+## 9. Post-Edit Audit
 
 After any rewrite, check:
 
 - meaning preservation
-- claim strength preservation or justified softening
+- detail preservation
+- claim calibration consistency
 - citation anchoring
 - tone consistency
 - whether the edit introduced generic prose that is less scholarly than the original
-- whether checklist coverage is useful rather than noisy
+- whether changed / skipped / unchanged reporting is transparent rather than optimistic
 
-## 7. Whole-Document Rule
+## 10. Whole-Document Rule
 
 Never rewrite a full manuscript as one undifferentiated pass. Process it section by section.
 
@@ -113,7 +157,8 @@ Preferred order:
 4. discussion
 5. conclusion
 6. methods or results only if explicitly requested
+7. residual scan and transparent reporting
 
-## 8. Escalation Rule
+## 11. Escalation Rule
 
-If the text has serious factual, citation, or logic issues, do not hide them under stylistic editing. Flag them separately and keep the de-AI edits minimal.
+If the text has serious factual, citation, logic, or formatting issues that are outside stylistic editing, flag them separately and keep the de-AI edits minimal.
