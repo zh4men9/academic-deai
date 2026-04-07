@@ -8,6 +8,43 @@ This skill is designed for journal and conference prose, not for casual humaniza
 
 - Chinese mirror: [zh4men9/academic-deai-zh](https://github.com/zh4men9/academic-deai-zh)
 
+## Installation
+
+### Codex
+
+```bash
+mkdir -p ~/.codex/skills
+git clone https://github.com/zh4men9/academic-deai.git ~/.codex/skills/academic-deai
+```
+
+### Claude Code
+
+```bash
+mkdir -p ~/.claude/skills
+git clone https://github.com/zh4men9/academic-deai.git ~/.claude/skills/academic-deai
+```
+
+### Update
+
+If you installed the skill into Codex:
+
+```bash
+git -C ~/.codex/skills/academic-deai pull
+```
+
+If you installed the skill into Claude Code:
+
+```bash
+git -C ~/.claude/skills/academic-deai pull
+```
+
+### Verify
+
+Ask your agent:
+
+- `De-AI this abstract without changing technical meaning.`
+- `Rewrite this introduction so it sounds less LLM-written but keep the citations and evidence intact.`
+
 ## What This Skill Does
 
 - De-AIs abstracts, introductions, related work, discussions, conclusions, cover letters, and rebuttal letters
