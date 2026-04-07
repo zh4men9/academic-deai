@@ -4,6 +4,10 @@ An open-source Codex skill for reducing AI-like phrasing in **English academic w
 
 This skill is designed for journal and conference prose, not for casual humanization. Its goal is to make academic text sound **less templated, less inflated, and more specific** while keeping the writing formal, evidence-linked, and discipline-appropriate.
 
+## Related Repository
+
+- Chinese mirror: [zh4men9/academic-deai-zh](https://github.com/zh4men9/academic-deai-zh)
+
 ## What This Skill Does
 
 - De-AIs abstracts, introductions, related work, discussions, conclusions, cover letters, and rebuttal letters
@@ -34,8 +38,18 @@ This skill is best suited to requests such as:
 academic-deai/
 ├── SKILL.md
 ├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+├── CHANGELOG.md
 ├── agents/
 │   └── openai.yaml
+├── benchmark-demo/
+│   ├── README.md
+│   ├── cases.md
+│   └── results.md
+├── examples/
+│   ├── README.md
+│   └── prompts.md
 └── references/
     ├── claim-calibration.md
     ├── core-rules.md
@@ -158,8 +172,8 @@ This is the first version intended for open-source use as a stable, reusable wor
 
 ## Chinese Mirror
 
-A Chinese mirror of this skill is maintained in:
+A Chinese mirror of this skill is maintained in a separate repository:
 
-- `/Users/zh4men9/.codex/skills/academic-deai-zh`
+- [zh4men9/academic-deai-zh](https://github.com/zh4men9/academic-deai-zh)
 
 The Chinese mirror is intended for maintainability and accessibility. It should stay structurally aligned with the English version rather than evolve independently.
