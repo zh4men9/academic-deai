@@ -10,6 +10,7 @@ This skill is not intended to do the following.
 - It is not a structure-overhaul tool.
 - It is not an argument improver unless the user explicitly asks for argumentative revision.
 - It is not a fluency maximizer at the cost of precision.
+- It is not a substitute for human review on high-risk academic edits.
 
 ## Important Clarifications
 
@@ -18,3 +19,4 @@ This skill is not intended to do the following.
 - "More natural" does not mean longer, warmer, or more decorative.
 - A successful edit may leave some stiffness in place if that stiffness protects accuracy.
 - If the source text has factual or citation problems, this skill should flag them, not silently rewrite around them.
+- High-risk automation should narrow the reviewer workload, not eliminate review entirely.

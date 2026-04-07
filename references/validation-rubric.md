@@ -32,8 +32,14 @@ Use this rubric in final audit mode after any rewrite.
 - Borderline: rhythm improves but one edit becomes more generic
 - Fail: the rewrite sounds smoother at the cost of specificity or discipline fit
 
+## 6. Manual Check coverage
+
+- Pass: every high-risk or citation-sensitive edit that needs review appears once in `Manual Check Items`, and the checklist is useful rather than noisy
+- Borderline: the checklist is mildly noisy or misses a low-severity item
+- Fail: the checklist misses a material review item or floods the reviewer with low-value items
+
 ## Audit Decision
 
-- Safe: all five categories pass, or only minor borderline cases remain
+- Safe: all six categories pass, or only minor borderline cases remain
 - Needs revision: one or more important borderline cases remain
 - Unsafe: any fail is present

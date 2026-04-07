@@ -13,6 +13,7 @@ These rules override stylistic preferences. If a possible edit conflicts with an
 - Do not inject first person, contractions, idioms, humor, or conversational markers by default.
 - Do not silently fix factual or bibliographic problems unless the user asked for that work.
 - If the original text is already natural enough, recommend minimal or no edits.
+- When an edit changes claim strength, exact quantitative wording, citation-bearing prose, methods wording, causal explanation, generality scope, or a definition-like sentence, emit a `Manual Check Item`.
 
 ## Positive Goal
 
@@ -37,3 +38,13 @@ When two edits conflict, prefer:
 ## Practical Rule of Thumb
 
 If an edit makes the text smoother but also slightly more generic, less exact, more assertive, or less traceable to evidence, reject the edit.
+
+## Manual Check Principle
+
+Not every rewrite needs manual review. Use `Manual Check Items` only when:
+
+- the change is materially risky
+- reviewer confirmation would reduce uncertainty
+- precision had to be protected by sacrificing fluency or vice versa
+
+Do not flood the reviewer with checklist noise for harmless low-risk cleanup.
